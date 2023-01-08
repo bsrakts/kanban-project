@@ -1,4 +1,70 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+
+:root {
+  --bg-dark-black-first: #1C1C1C;
+  --bg-dark-black-second: #252525;
+  --bg-dark-green-first: #1C6758;
+  --bg-dark-green-second: #2f8171;
+  --bg-dark-green-third: #176455;
+  --bg-light-green-first: #3D8361;
+  --bg-light-cream-first: #D6CDA4;
+  --bg-light-first: #EEF2E6;
+}
+
+body {
   box-sizing: content-box;
-  background-color:#1C6758;
+  background-color: var(--bg-dark-green-first);
+  font-family: 'Poppins', sans-serif;
+  color: var(--bg-dark-black-second);
+}
+
+.card_container{
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+  min-height: 80vh;
+}
+
+.card{
+  background-color: var(--bg-light-green-first) !important;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+}
+
+.status_title{
+  color: var(--bg-dark-black-first);
+  font-size: 1.5em;
+  margin: 0;
+  padding: 0;
+}
+
+.kanban__items-input{
+  padding: 10px 15px;
+  box-sizing: border-box !important;
+  background-color: var(--bg-light-cream-first);
+  border-radius: 5px;
+  cursor:pointer;
+}
+
+.kanban__dropzone{
+  height: 10px;
+  transition: background 0.15s, height 0.15s;
+}
+
+.kanban__dropzone--active{
+  height: 20px;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.add_items{
+  width: 50%;
+  margin: 0 auto;
+  border:1px solid var(--bg-light-first);
+  border-radius: 5px;
+  padding:10px 0px;
+  font-size: 16px;
+  color: var(--bg-light-first);
+  background: rgba(0, 0, 0, 0.4);
 }
