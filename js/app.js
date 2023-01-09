@@ -1,9 +1,8 @@
-import KanbanAPI from './api/KanbanAPI.js';
 
-console.log(KanbanAPI.insertItem(2, "I am new!"));
+import Kanban from './view/Kanban.js';
 
-KanbanAPI.updateItem(47521, {
-  columnId: 1,
-  position: 0,
-  content: "I am updated!"
-});
+// console.log(Kanban);
+
+new Kanban(
+  document.querySelector('.kanban')
+);

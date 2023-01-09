@@ -5,11 +5,11 @@
   --bg-dark-black-first: #1C1C1C;
   --bg-dark-black-second: #252525;
   --bg-dark-green-first: #1C6758;
-  --bg-dark-green-second: #2f8171;
-  --bg-dark-green-third: #176455;
+  --bg-dark-green-second: #216d5e;
+  --bg-dark-green-third: #186b5a;
   --bg-light-green-first: #3D8361;
   --bg-light-cream-first: #D6CDA4;
-  --bg-light-first: #EEF2E6;
+  --bg-light-first: rgb(243, 244, 241, 0.4);
 }
 
 body {
@@ -20,17 +20,20 @@ body {
 }
 
 .card_container{
-  background-color: transparent;
+  background-color: var(--bg-dark-green-first);
   border-radius: 10px;
-  padding: 10px;
-  margin: 10px;
-  box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
-  min-height: 80vh;
+  width:80%;
+  margin: 0 auto;
+  box-shadow: 0 0 12px 14px rgba(0, 255, 115, 0.05);
+  border: 1px solid var(--bg-light-first);
+  min-height:80vh;
 }
 
 .card{
   background-color: var(--bg-light-green-first) !important;
-  box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 0 9px 6px rgba(2, 97, 24, 0.2);
+  margin-top:20px;
+  border: 1px solid var(--bg-light-first);
 }
 
 .status_title{
@@ -44,6 +47,7 @@ body {
   padding: 10px 15px;
   box-sizing: border-box !important;
   background-color: var(--bg-light-cream-first);
+  box-shadow: 0 0 4px px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   cursor:pointer;
 }
@@ -59,12 +63,13 @@ body {
 }
 
 .add_items{
-  width: 50%;
-  margin: 0 auto;
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 20px;
   border:1px solid var(--bg-light-first);
   border-radius: 5px;
   padding:10px 0px;
   font-size: 16px;
-  color: var(--bg-light-first);
+  color: var(--bg-light-cream-first);
   background: rgba(0, 0, 0, 0.4);
 }
