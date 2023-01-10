@@ -1,8 +1,11 @@
 import KanbanAPI from "../api/KanbanAPI.js";
+import DropZone from "./DropZone.js";
 import Item from "./Item.js";
 
 export default class Column {
   constructor(id, title) {
+   const topDropZone = DropZone.createDropZone();
+
     this.elements = {};
     this.elements.root = Column.createRoot();
     this.elements.title = this.elements.root.querySelector(".status_title");
@@ -11,6 +14,7 @@ export default class Column {
 
     this.elements.root.dataset.id = id;
     this.elements.title.textContent = title;
+    this.elements.items.appendChild(topDropZone);
 
     this.elements.addItem.addEventListener("click", () => {
       const newItem = KanbanAPI.insertItem(id, "");
@@ -30,13 +34,10 @@ export default class Column {
     range.selectNode(document.querySelector(".card_container"));
 
     return range.createContextualFragment(`
-      <div class="col-4 card-it">
+      <div class="col-12 col-md-4 card-it">
         <div class="card">
-          <div class="card-header">
-            <h3 class="card-title status_title"></h3>
-          </div>
           <div class="card-body kanban__items">
-            <div contenteditable class="kanban__items-input"></div>
+          <h3 class="card-title status_title mb-2 p-2"></h3>
             <div class="kanban__dropzone"></div>
           </div>
 

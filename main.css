@@ -32,7 +32,7 @@ body {
 .card{
   background-color: var(--bg-light-green-first) !important;
   box-shadow: 0 0 9px 6px rgba(2, 97, 24, 0.2);
-  margin-top:20px;
+  margin:20px 0px 20px 0px;
   border: 1px solid var(--bg-light-first);
 }
 
@@ -41,13 +41,15 @@ body {
   font-size: 1.5em;
   margin: 0;
   padding: 0;
+  border-bottom: 1px solid var(--bg-light-first);
 }
 
-.kanban__items-input{
+.kanban__items-input {
   padding: 10px 15px;
   box-sizing: border-box !important;
   background-color: var(--bg-light-cream-first);
   box-shadow: 0 0 4px px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--bg-dark-green-third);
   border-radius: 5px;
   cursor:pointer;
 }
@@ -65,11 +67,27 @@ body {
 .add_items{
   width: 80%;
   margin-left: 10%;
-  margin-top: 20px;
+  margin-bottom: 20px;
   border:1px solid var(--bg-light-first);
   border-radius: 5px;
   padding:10px 0px;
   font-size: 16px;
   color: var(--bg-light-cream-first);
   background: rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (max-width: 768px) {
+  .status_title{
+    font-size:1.3em;
+  }
+}
+
+/* tiny */
+
+.tox .tox-statusbar__text-container{
+  display:none !important;
+}
+
+.tox .tox-menubar{
+  padding: 0 4px 0 4px !important;
 }

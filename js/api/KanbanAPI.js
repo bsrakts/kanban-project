@@ -22,7 +22,8 @@ export default class KanbanAPI {
 
     column.items.push(item);
     save(data);
-
+   
+    location.reload();
     return item;
   }
 

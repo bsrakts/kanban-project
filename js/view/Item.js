@@ -6,7 +6,7 @@ export default class Item {
     const bottomDropZone = DropZone.createDropZone();
 
     this.elements = {};
-    this.elements.root = Item.createRoot();
+    this.elements.root = Item.createRoot(id);
     this.elements.input = this.elements.root.querySelector(".kanban__items-input");
 
     this.elements.root.dataset.id = id;
@@ -53,14 +53,14 @@ export default class Item {
 
 
 
-  static createRoot() {
+  static createRoot(id) {
     const range = document.createRange();
 
     range.selectNode(document.querySelector(".card_container"));
 
     return range.createContextualFragment(`
       <div class="kanban__item" draggable="true">
-        <div class="kanban__items-input" contenteditable></div>
+        <textarea id="txt_`+id+`" class="kanban__items-input" contenteditable></textarea>
       </div>
       `).children[0];
   }
